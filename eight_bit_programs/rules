@@ -1,0 +1,36 @@
+#ruledef
+{
+  nop => 0x00
+  lda {addr} => 0x01 @ addr`8
+  add {addr} => 0x02 @ addr`8
+  sub {addr} => 0x03 @ addr`8
+  sta {addr} => 0x04 @ addr`8
+  lda.i {value} => 0x05 @ value`8
+  jmp {pc} => 0x06 @ pc`8
+  jmc {pc} => 0x07 @ pc`8
+  jmz {pc} => 0x08 @ pc`8
+  add.i {value} => 0x09 @ value`8
+  sub.i {value} => 0x0A @ value`8
+  lda.rel {offset} => 0x0B @ offset`8
+  jmn {pc} => 0x0C @ pc`8
+  out => 0x0E
+  hlt => 0x0F
+
+  tapi => 0x11
+  tapd => 0x12
+  psh => 0x13
+  pop => 0x14
+  tsa => 0x15
+
+  tas => 0x17
+  subf {addr} => 0x18 @ addr`8
+  subf.i {value} => 0x19 @ value`8
+  jsr {addr} => 0x1A @ addr`8
+  rts => 0x1B
+  tia => 0x1C
+  tra => 0x1D
+  ldpi.i {value} => 0x1E @ value`8
+  ldpd.i {value} => 0x1F @ value`8
+  tpia => 0x20
+  tpda => 0x21
+}
